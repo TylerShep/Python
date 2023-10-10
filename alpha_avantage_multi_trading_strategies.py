@@ -138,7 +138,7 @@ def CreateData(ticker):
     times_series_function = "TIME_SERIES_DAILY_ADJUSTED"
     time_interval = "365"
     output_size = "compact"
-    api_key = "JJ6P7PSEA1F8K6BU"
+    api_key = SECRETS_ALPHA_ADVANTAGE_API_KEY
     adj_key = "5. adjusted close"
     time_key = "Time Series (Daily)"
     
