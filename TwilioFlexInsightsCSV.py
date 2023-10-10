@@ -1,10 +1,10 @@
 import requests
 import json
 
-flex_login = 'business-intelligence@rentdynamics.com'
-flex_pass = 'QYC!anv_gpx0meu3mqu'
-twilio_workspace_id = 'fqh3dx3v2sz4n7imop00szjn1d3gt0au'
-twilio_object_id = '3841209'
+flex_login = SECRETS_FLEX_LOGIN
+flex_pass = SECRETS_FLEX_PASSWORD
+twilio_workspace_id = SECRETS_TWILIO_OBJECT_ID
+twilio_object_id = SECRETS_TWILIO_WORKSPACE
 
 
 def prep_downloaded_format_to_csv(data):
