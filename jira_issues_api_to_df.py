@@ -22,7 +22,7 @@ class JiraIssuesService:
 
   # FUNCITON FOR ISSUES API GET REQUEST/RESPONSE
   def GetJiraIssues (username, api_token, domain, url):
-    auth = HTTPBasicAuth(rd_username, rd_api_token)
+    auth = HTTPBasicAuth(username, api_token)
     headers = {
       "Accept": "application/json"
     }
@@ -63,3 +63,7 @@ class JiraIssuesService:
       break
 
     print(f'Failed Response, Error Code: {response.status_code}')
+
+
+  issues_data = GetIssues(main_username, main_api_token, main_jira_domain)
+  print(issues_data)
