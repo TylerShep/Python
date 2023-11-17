@@ -1,14 +1,14 @@
--- =============================================
--- AUTHOR:      Tyler Shepherd
--- CREATE DATE: 2023-11-17
--- LAST UPDATE DATE:
--- PROBLEM: Due to tasks being backed up, sometimes a stream snapshot wont go off and populate a stats table with yesterdays data. this code block will be used to account for missed days and will start a backfill
--- DESCRIPTION: 
+# =============================================
+# AUTHOR:      Tyler Shepherd
+# CREATE DATE: 2023-11-17
+# LAST UPDATE DATE:
+# PROBLEM: Due to tasks being backed up, sometimes a stream snapshot wont go off and populate a stats table with yesterdays data. this code block will be used to account for missed days and will start a backfill
+# DESCRIPTION: 
 # Create a DB connection to where a stats_table (postgres) is storing snapshot data by day
 # Using DB connection, query for the lastest date in the table, save to a pandas dictionary, and return as a single datetime value
 # Check to see if the returned datetime value is yesteray; pass if and continue normally in stream pipeline if it is. if it isn't, create a list of all dates between the returned date and yesterday. return this date list.
 # Loop through list of dates in stream pipeline to backfill dates missed
--- =============================================
+# =============================================
 
 
 from datetime import datetime, timedelta
