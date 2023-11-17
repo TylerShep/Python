@@ -2,7 +2,7 @@
 # AUTHOR:      Tyler Shepherd
 # CREATE DATE: 2023-11-17
 # LAST UPDATE DATE:
-# PROBLEM: Due to tasks being backed up, sometimes a stream snapshot wont go off and populate a stats table with yesterdays data. this code block will be used to account for missed days and will start a backfill
+# PROBLEM: Due to tasks being backed up for my kinesis data stream, sometimes a stream snapshot wont go off and populate a stats table with yesterdays data. this code block will be used to account for missed days and will start a backfill
 # DESCRIPTION: 
 # Create a DB connection to where a stats_table (postgres) is storing snapshot data by day
 # Using DB connection, query for the lastest date in the table, save to a pandas dictionary, and return as a single datetime value
