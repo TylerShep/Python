@@ -35,7 +35,7 @@ def create_connection(db_name, db_user, db_password, db_host, db_port):
 
 def get_last_stats_date(connection):
     df = pd.read_sql('''select es.stats_date
-                        from rentplus_community_enrollment_stat es
+                        from stat_table_1 es
                         group by es.stats_date
                         order by 1 desc limit 1;''', connection)
     
